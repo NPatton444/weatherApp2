@@ -15,6 +15,8 @@ namespace weatherApp2
         public Form1()
         {
             InitializeComponent();
+            ForecastScreen fs = new ForecastScreen();
+            this.Controls.Add(fs);
         }
     }
 }
