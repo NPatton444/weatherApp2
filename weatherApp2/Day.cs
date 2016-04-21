@@ -9,11 +9,10 @@ namespace weatherApp2
 {
     class Day
     {
-        public string city, date, tempAve, tempHigh, tempLow, humidity, clouds, chanceRain;
-        public Image[] background = new Image[7];
-        public Color[] backColor = new Color[7];
+        public string city, date, tempAve, tempHigh, tempLow, humidity, clouds, chanceRain, precipType;
+        int colorPick;
 
-        public Day(string _city, string _date, string _tempAve, string _tempHigh, string _tempLow, string _humidity, string _clouds, string _chanceRain, Image[] _background, Color[] _backColor)
+        public Day(string _city, string _date, string _tempAve, string _tempHigh, string _tempLow, string _humidity, string _clouds, string _chanceRain, string _precipType, int _colorPick)
         {
             city = _city;
             date = _date;
@@ -23,8 +22,8 @@ namespace weatherApp2
             humidity = _humidity;
             clouds = _clouds;
             chanceRain = _chanceRain;
-            background = _background;
-            backColor = _backColor;
+            precipType = _precipType;
+            colorPick = _colorPick;
         }
     }
 }

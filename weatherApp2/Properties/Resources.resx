@@ -133,10 +133,4 @@
   <data name="sunny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sunny.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thunderstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thunderstorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="windy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\windy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
