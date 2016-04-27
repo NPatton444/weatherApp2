@@ -221,7 +221,7 @@ namespace weatherApp2
                     {
                         foreach (XmlNode greatGrandChild in grandChild.ChildNodes)
                         {
-                            if (greatGrandChild.Name == "percipitation")
+                            if (greatGrandChild.Name == "precipitation")
                             {
                                 switch (day)
                                 {
@@ -229,27 +229,69 @@ namespace weatherApp2
                                         day++;
                                         break;
                                     case 2:
-                                        precipType1 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType1.Equals(greatGrandChild.Attributes["type"].Value);
+                                        }
+                                        else
+                                        {
+                                            precipType1.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     case 3:
-                                        precipType2 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType2 = greatGrandChild.Attributes["type"].Value;
+                                        }
+                                        else
+                                        {
+                                            precipType2.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     case 4:
-                                        precipType3 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType3 = greatGrandChild.Attributes["type"].Value;
+                                        }
+                                        else
+                                        {
+                                            precipType3.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     case 5:
-                                        precipType4 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType4 = greatGrandChild.Attributes["type"].Value;
+                                        }
+                                        else
+                                        {
+                                            precipType4.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     case 6:
-                                        precipType5 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType5 = greatGrandChild.Attributes["type"].Value;
+                                        }
+                                        else
+                                        {
+                                            precipType5.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     case 7:
-                                        precipType6 = greatGrandChild.Attributes["type"].Value;
+                                        if (greatGrandChild.Attributes["type"] != null)
+                                        {
+                                            precipType6 = greatGrandChild.Attributes["type"].Value;
+                                        }
+                                        else
+                                        {
+                                            precipType6.Equals("No Rain");
+                                        }
                                         day++;
                                         break;
                                     default:
