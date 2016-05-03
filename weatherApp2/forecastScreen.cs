@@ -19,6 +19,25 @@ namespace weatherApp2
         Image[] background = new Image[5];
         Color[] backColor = new Color[5];
 
+        //Forecast Variables
+        string date1, tempAve1, tempHigh1, tempLow1, humidity1, clouds1, chanceRain1, precipType1;
+        int colorPick1 = 0;
+
+        string date2, tempAve2, tempHigh2, tempLow2, humidity2, clouds2, chanceRain2, precipType2;
+        int colorPick2 = 0;
+
+        string date3, tempAve3, tempHigh3, tempLow3, humidity3, clouds3, chanceRain3, precipType3;
+        int colorPick3 = 0;
+
+        string date4, tempAve4, tempHigh4, tempLow4, humidity4, clouds4, chanceRain4, precipType4;
+        int colorPick4 = 0;
+
+        string date5, tempAve5, tempHigh5, tempLow5, humidity5, clouds5, chanceRain5, precipType5;
+        int colorPick5 = 0;
+
+        string date6, tempAve6, tempHigh6, tempLow6, humidity6, clouds6, chanceRain6, precipType6;
+        int colorPick6 = 0;
+
         //List of Days
         List<Day> dayList = new List<Day>();
 
@@ -46,6 +65,31 @@ namespace weatherApp2
 
             // take info from the forecast weather file and save it to day list
             ExtractForecast();
+
+            //Current Info
+            dateLabel.Text = date;
+            cityLabel.Text = city;
+            currentTempLabel.Text = tempAve;
+            highLowTempLabel.Text = tempHigh + "/" + tempLow;
+            humidityLabel.Text = humidity;
+            cloudsLabel.Text = clouds;
+            chancePrecipLabel.Text = chanceRain;
+            weatherImage.BackgroundImage = background[colorPick];
+            this.BackColor = backColor[colorPick];
+
+            //Forecast Info
+            day2Label.Text = date1;
+            day3Label.Text = date2;
+            day4Label.Text = date3;
+            day5Label.Text = date4;
+            day6Label.Text = date5;
+            day7Label.Text = date6;
+            temp2Label.Text = tempAve1;
+            temp3Label.Text = tempAve2;
+            temp4Label.Text = tempAve3;
+            temp5Label.Text = tempAve4;
+            temp6Label.Text = tempAve5;
+            temp7Label.Text = tempAve6;
         }
 
         private static void GetData()
@@ -96,6 +140,11 @@ namespace weatherApp2
             }
             date = DateTime.Now.ToString("ddd-MMM-dd-yyyy");
             ExtractCurrentRainForecast();
+
+            if(chanceRain == null)
+            {
+                chanceRain = "No Rain";
+            }
 
             if(clouds == "overcast clouds")
             {
@@ -177,24 +226,6 @@ namespace weatherApp2
 
         public void ExtractForecast()
         {
-            string date1, tempAve1, tempHigh1, tempLow1, humidity1, clouds1, chanceRain1, precipType1;
-            int colorPick1 = 0;
-
-            string date2, tempAve2, tempHigh2, tempLow2, humidity2, clouds2, chanceRain2, precipType2;
-            int colorPick2 = 0;
-
-            string date3, tempAve3, tempHigh3, tempLow3, humidity3, clouds3, chanceRain3, precipType3;
-            int colorPick3 = 0;
-
-            string date4, tempAve4, tempHigh4, tempLow4, humidity4, clouds4, chanceRain4, precipType4;
-            int colorPick4 = 0;
-
-            string date5, tempAve5, tempHigh5, tempLow5, humidity5, clouds5, chanceRain5, precipType5;
-            int colorPick5 = 0;
-
-            string date6, tempAve6, tempHigh6, tempLow6, humidity6, clouds6, chanceRain6, precipType6;
-            int colorPick6 = 0;
-
             //Set initial values for variables
             date1 = tempAve1 = tempHigh1 = tempLow1 = humidity1 = clouds1 = chanceRain1 = precipType1 = "";
             date2 = tempAve2 = tempHigh2 = tempLow2 = humidity2 = clouds2 = chanceRain2 = precipType2 = "";
@@ -226,7 +257,7 @@ namespace weatherApp2
                                 switch (day)
                                 {
                                     case 1:
-                                        day++;
+                                        
                                         break;
                                     case 2:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -237,7 +268,7 @@ namespace weatherApp2
                                         {
                                             precipType1.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     case 3:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -248,7 +279,7 @@ namespace weatherApp2
                                         {
                                             precipType2.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     case 4:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -259,7 +290,7 @@ namespace weatherApp2
                                         {
                                             precipType3.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     case 5:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -270,7 +301,7 @@ namespace weatherApp2
                                         {
                                             precipType4.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     case 6:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -281,7 +312,7 @@ namespace weatherApp2
                                         {
                                             precipType5.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     case 7:
                                         if (greatGrandChild.Attributes["type"] != null)
@@ -292,7 +323,7 @@ namespace weatherApp2
                                         {
                                             precipType6.Equals("No Rain");
                                         }
-                                        day++;
+                                        
                                         break;
                                     default:
                                         break;
@@ -300,47 +331,47 @@ namespace weatherApp2
                             }
                             else if (greatGrandChild.Name == "temperature")
                             {
-                                day = 1;
+                                
                                 switch (day)
                                 {
                                     case 1:
-                                        day++;
+                                        
                                         break;
                                     case 2:
                                         tempAve1 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh1 = greatGrandChild.Attributes["max"].Value;
                                         tempLow1 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 3:
                                         tempAve2 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh2 = greatGrandChild.Attributes["max"].Value;
                                         tempLow2 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 4:
                                         tempAve3 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh3 = greatGrandChild.Attributes["max"].Value;
                                         tempLow3 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 5:
                                         tempAve4 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh4 = greatGrandChild.Attributes["max"].Value;
                                         tempLow4 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 6:
                                         tempAve5 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh5 = greatGrandChild.Attributes["max"].Value;
                                         tempLow5 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 7:
                                         tempAve6 = greatGrandChild.Attributes["day"].Value;
                                         tempHigh6 = greatGrandChild.Attributes["max"].Value;
                                         tempLow6 = greatGrandChild.Attributes["min"].Value;
-                                        day++;
+                                        
                                         break;
                                     default:
                                         break;
@@ -349,36 +380,36 @@ namespace weatherApp2
 
                             else if(greatGrandChild.Name == "humidity")
                             {
-                                day = 1;
+                                
 
                                 switch (day)
                                 {
                                     case 1:
-                                        day++;
+                                        
                                         break;
                                     case 2:
                                         humidity1 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 3:
                                         humidity2 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 4:
                                         humidity3 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 5:
                                         humidity4 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 6:
                                         humidity5 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     case 7:
                                         humidity6 = greatGrandChild.Attributes["value"].Value;
-                                        day++;
+                                        
                                         break;
                                     default:
                                         break;
@@ -387,7 +418,7 @@ namespace weatherApp2
 
                             else if (greatGrandChild.Name == "clouds")
                             {
-                                day = 1;
+                                
                                 switch (day)
                                 {
                                     case 1:
