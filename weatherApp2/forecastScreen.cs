@@ -16,33 +16,39 @@ namespace weatherApp2
     {
         string city, date, tempAve, tempHigh, tempLow, humidity, clouds, chanceRain, precipType;
         int colorPick;
-        Image[] background = new Image[5];
-        Color[] backColor = new Color[5];
+        public static Image[] background = new Image[5];
+        public static Color[] backColor = new Color[5];
 
         //Forecast Variables
-        string date1, tempAve1, tempHigh1, tempLow1, humidity1, clouds1, chanceRain1, precipType1;
-        int colorPick1 = 0;
+        public static string date1, tempAve1, tempHigh1, tempLow1, humidity1, clouds1, chanceRain1, precipType1;
+        public static int colorPick1 = 0;
 
-        string date2, tempAve2, tempHigh2, tempLow2, humidity2, clouds2, chanceRain2, precipType2;
-        int colorPick2 = 0;
+        public static string date2, tempAve2, tempHigh2, tempLow2, humidity2, clouds2, chanceRain2, precipType2;
+        public static int colorPick2 = 0;
 
-        string date3, tempAve3, tempHigh3, tempLow3, humidity3, clouds3, chanceRain3, precipType3;
-        int colorPick3 = 0;
+        public static string date3, tempAve3, tempHigh3, tempLow3, humidity3, clouds3, chanceRain3, precipType3;
+        public static int colorPick3 = 0;
 
-        string date4, tempAve4, tempHigh4, tempLow4, humidity4, clouds4, chanceRain4, precipType4;
-        int colorPick4 = 0;
+        public static string date4, tempAve4, tempHigh4, tempLow4, humidity4, clouds4, chanceRain4, precipType4;
+        public static int colorPick4 = 0;
 
-        string date5, tempAve5, tempHigh5, tempLow5, humidity5, clouds5, chanceRain5, precipType5;
-        int colorPick5 = 0;
+        public static string date5, tempAve5, tempHigh5, tempLow5, humidity5, clouds5, chanceRain5, precipType5;
+        public static int colorPick5 = 0;
 
-        string date6, tempAve6, tempHigh6, tempLow6, humidity6, clouds6, chanceRain6, precipType6;
-        int colorPick6 = 0;
+        public static string date6, tempAve6, tempHigh6, tempLow6, humidity6, clouds6, chanceRain6, precipType6;
+        public static int colorPick6 = 0;
+
+        //Click Booleans
+        public static bool label2Click, label3Click, label4Click, label5Click, label6Click, label7Click;
 
         //List of Days
         List<Day> dayList = new List<Day>();
 
         public ForecastScreen()
         {
+            //Initialize bools
+            label2Click = label3Click = label4Click = label5Click = label6Click = label7Click = false;
+
             //Arrays of background images and colors
             background[0] = Properties.Resources.cloudy;
             background[1] = Properties.Resources.partlycloudy;
@@ -57,6 +63,7 @@ namespace weatherApp2
             backColor[4] = Color.FromArgb(255, 102, 102);
 
             InitializeComponent();
+
             // get information about current and forecast weather from the internet
             GetData();
 
@@ -525,6 +532,66 @@ namespace weatherApp2
             {
                 colorPickx = 1;
             }
+        }
+
+        private void ForecastScreen_Paint(object sender, PaintEventArgs e)
+        {
+            Pen separatePen = new Pen(Color.White, 5);
+            e.Graphics.DrawLine(separatePen, 0, 410, this.Width, 410);
+        }
+
+        private void day2Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label2Click = true;
+        }
+
+        private void day3Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label3Click = true;
+        }
+
+        private void day4Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label4Click = true;
+        }
+
+        private void day5Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label5Click = true;
+        }
+
+        private void day6Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label6Click = true;
+        }
+
+        private void day7Label_Click(object sender, EventArgs e)
+        {
+            DayScreen ds = new DayScreen();
+            Form f = this.FindForm();
+            f.Controls.Add(ds);
+            f.Controls.Remove(this);
+            label7Click = true;
         }
     }
 }

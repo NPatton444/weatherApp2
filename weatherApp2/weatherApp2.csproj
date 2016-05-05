@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Day.cs" />
+    <Compile Include="DayScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DayScreen.Designer.cs">
+      <DependentUpon>DayScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForecastScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DayScreen.resx">
+      <DependentUpon>DayScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForecastScreen.resx">
       <DependentUpon>ForecastScreen.cs</DependentUpon>
     </EmbeddedResource>
