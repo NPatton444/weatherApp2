@@ -54,6 +54,7 @@
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // dateLabel
             // 
@@ -81,7 +82,7 @@
             this.currentTempLabel.BackColor = System.Drawing.Color.Transparent;
             this.currentTempLabel.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentTempLabel.ForeColor = System.Drawing.Color.White;
-            this.currentTempLabel.Location = new System.Drawing.Point(3, 436);
+            this.currentTempLabel.Location = new System.Drawing.Point(3, 382);
             this.currentTempLabel.Name = "currentTempLabel";
             this.currentTempLabel.Size = new System.Drawing.Size(120, 62);
             this.currentTempLabel.TabIndex = 4;
@@ -93,9 +94,9 @@
             this.humidityLabel.BackColor = System.Drawing.Color.Transparent;
             this.humidityLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.humidityLabel.ForeColor = System.Drawing.Color.White;
-            this.humidityLabel.Location = new System.Drawing.Point(29, 498);
+            this.humidityLabel.Location = new System.Drawing.Point(-4, 584);
             this.humidityLabel.Name = "humidityLabel";
-            this.humidityLabel.Size = new System.Drawing.Size(74, 33);
+            this.humidityLabel.Size = new System.Drawing.Size(134, 67);
             this.humidityLabel.TabIndex = 6;
             this.humidityLabel.Text = "label1";
             this.humidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,9 +106,9 @@
             this.chancePrecipLabel.BackColor = System.Drawing.Color.Transparent;
             this.chancePrecipLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chancePrecipLabel.ForeColor = System.Drawing.Color.White;
-            this.chancePrecipLabel.Location = new System.Drawing.Point(6, 565);
+            this.chancePrecipLabel.Location = new System.Drawing.Point(249, 479);
             this.chancePrecipLabel.Name = "chancePrecipLabel";
-            this.chancePrecipLabel.Size = new System.Drawing.Size(117, 33);
+            this.chancePrecipLabel.Size = new System.Drawing.Size(159, 89);
             this.chancePrecipLabel.TabIndex = 7;
             this.chancePrecipLabel.Text = "label1";
             this.chancePrecipLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,19 +118,19 @@
             this.cloudsLabel.BackColor = System.Drawing.Color.Transparent;
             this.cloudsLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cloudsLabel.ForeColor = System.Drawing.Color.White;
-            this.cloudsLabel.Location = new System.Drawing.Point(107, 650);
+            this.cloudsLabel.Location = new System.Drawing.Point(3, 507);
             this.cloudsLabel.Name = "cloudsLabel";
-            this.cloudsLabel.Size = new System.Drawing.Size(196, 33);
+            this.cloudsLabel.Size = new System.Drawing.Size(189, 33);
             this.cloudsLabel.TabIndex = 8;
             this.cloudsLabel.Text = "label1";
-            this.cloudsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cloudsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // highLowTempLabel
             // 
             this.highLowTempLabel.BackColor = System.Drawing.Color.Transparent;
             this.highLowTempLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highLowTempLabel.ForeColor = System.Drawing.Color.White;
-            this.highLowTempLabel.Location = new System.Drawing.Point(262, 498);
+            this.highLowTempLabel.Location = new System.Drawing.Point(262, 402);
             this.highLowTempLabel.Name = "highLowTempLabel";
             this.highLowTempLabel.Size = new System.Drawing.Size(125, 33);
             this.highLowTempLabel.TabIndex = 9;
@@ -141,9 +142,9 @@
             this.windLabel.BackColor = System.Drawing.Color.Transparent;
             this.windLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.windLabel.ForeColor = System.Drawing.Color.White;
-            this.windLabel.Location = new System.Drawing.Point(262, 565);
+            this.windLabel.Location = new System.Drawing.Point(262, 583);
             this.windLabel.Name = "windLabel";
-            this.windLabel.Size = new System.Drawing.Size(117, 33);
+            this.windLabel.Size = new System.Drawing.Size(125, 69);
             this.windLabel.TabIndex = 28;
             this.windLabel.Text = "label1";
             this.windLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

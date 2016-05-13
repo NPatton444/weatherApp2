@@ -63,9 +63,9 @@ namespace weatherApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloudy {
+        internal static System.Drawing.Bitmap cloudy__1_ {
             get {
-                object obj = ResourceManager.GetObject("cloudy", resourceCulture);
+                object obj = ResourceManager.GetObject("cloudy__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace weatherApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap partlycloudy {
+        internal static System.Drawing.Bitmap partlycloudy__1_ {
             get {
-                object obj = ResourceManager.GetObject("partlycloudy", resourceCulture);
+                object obj = ResourceManager.GetObject("partlycloudy__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace weatherApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rainy {
+        internal static System.Drawing.Bitmap rainy__1_ {
             get {
-                object obj = ResourceManager.GetObject("rainy", resourceCulture);
+                object obj = ResourceManager.GetObject("rainy__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace weatherApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snowy {
+        internal static System.Drawing.Bitmap snowy__1_ {
             get {
-                object obj = ResourceManager.GetObject("snowy", resourceCulture);
+                object obj = ResourceManager.GetObject("snowy__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace weatherApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sunny {
+        internal static System.Drawing.Bitmap sunny__1_ {
             get {
-                object obj = ResourceManager.GetObject("sunny", resourceCulture);
+                object obj = ResourceManager.GetObject("sunny__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
