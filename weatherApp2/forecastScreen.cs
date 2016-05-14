@@ -148,34 +148,6 @@ namespace weatherApp2
                 Form1.chanceRain = "No Rain";
             }
 
-            if(Form1.clouds == "overcast clouds")
-            {
-                if (Form1.precipType == "rain")
-                {
-                    Form1.colorPick = 2;
-                }
-
-                else if(Form1.precipType == "snow")
-                {
-                    Form1.colorPick = 3;
-                }
-
-                else
-                {
-                    Form1.colorPick = 0;
-                }
-            }
-
-            else if(Form1.clouds == "clear sky")
-            {
-                Form1.colorPick = 4;
-            }
-
-            else
-            {
-                Form1.colorPick = 1;
-            }
-
             Day d = new Day(Form1.city, Form1.date, Form1.tempAve, Form1.tempHigh, Form1.tempLow, Form1.humidity, Form1.clouds, Form1.chanceRain, Form1.precipType, Form1.windSpeed, Form1.windDirection, Form1.colorPick);
             Form1.DayList.Add(d);
         }
@@ -520,14 +492,6 @@ namespace weatherApp2
                 }
             }
 
-            //Get colorBack ground and image
-            ColorPicker(Form1.colorPick1, Form1.precipType1, Form1.clouds1);
-            ColorPicker(Form1.colorPick2, Form1.precipType2, Form1.clouds2);
-            ColorPicker(Form1.colorPick3, Form1.precipType3, Form1.clouds3);
-            ColorPicker(Form1.colorPick4, Form1.precipType4, Form1.clouds4);
-            ColorPicker(Form1.colorPick5, Form1.precipType5, Form1.clouds5);
-            ColorPicker(Form1.colorPick6, Form1.precipType6, Form1.clouds6);
-
             //Get date for days
             Form1.date1 = DateTime.Now.AddDays(1).ToString("ddd-MMM-dd-yyyy");
             Form1.date2 = DateTime.Now.AddDays(2).ToString("ddd-MMM-dd-yyyy");
@@ -551,36 +515,60 @@ namespace weatherApp2
             Form1.DayList.Add(d4);
             Form1.DayList.Add(d5);
             Form1.DayList.Add(d6);
-        }
 
-        public void ColorPicker(int colorPickx, string precipTypex, string cloudsx)
-        {
-            if (cloudsx.Equals( "overcast clouds"))
+            for (int i = 0; i < Form1.DayList.Count(); i++)
             {
-                if (precipTypex.Equals("rain"))
+                if (Form1.DayList[i].clouds == "overcast clouds")
                 {
-                    colorPickx = 2;
+                    if (Form1.DayList[i].chanceRain != "No Rain")
+                    {
+                        if (Convert.ToInt16(Form1.DayList[i].chanceRain) > 50)
+                        {
+                            if (Form1.DayList[i].precipType == "rain")
+                            {
+                                Form1.DayList[i].colorPick = 2;
+                            }
+
+                            else if (Form1.DayList[i].precipType == "snow")
+                            {
+                                Form1.DayList[i].colorPick = 3;
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        Form1.DayList[i].colorPick = 0;
+                    }
                 }
 
-                else if (precipTypex.Equals("snow"))
+                else if (Form1.DayList[i].clouds == "clear sky")
                 {
-                    colorPickx = 3;
+                    Form1.DayList[i].colorPick = 4;
                 }
 
                 else
                 {
-                    colorPickx = 0;
+                    if (Form1.DayList[i].chanceRain != "No Rain")
+                    {
+                        if (Convert.ToInt16(Form1.DayList[i].chanceRain) > 50)
+                        {
+                            if (Form1.DayList[i].precipType == "rain")
+                            {
+                                Form1.DayList[i].colorPick = 2;
+                            }
+
+                            else if (Form1.DayList[i].precipType == "snow")
+                            {
+                                Form1.DayList[i].colorPick = 3;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Form1.DayList[i].colorPick = 1;
+                    }
                 }
-            }
-
-            else if (cloudsx.Equals("clear sky"))
-            {
-                colorPickx = 4;
-            }
-
-            else
-            {
-                colorPickx = 1;
             }
         }
 
