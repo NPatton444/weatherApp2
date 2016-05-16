@@ -44,24 +44,24 @@ namespace weatherApp2
             ExtractForecast();
 
             //Current Info
-            dateLabel.Text = Form1.date;
-            cityLabel.Text = Form1.city;
-            currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.tempAve))) + "°C";
-            highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.tempHigh))) + "°C" + "/" + 
-                Convert.ToString(Math.Round(Convert.ToDecimal(Form1.tempLow))) + "°C";
-            humidityLabel.Text = "Humidity:\n" + Form1.humidity + "%";
-            cloudsLabel.Text = Form1.clouds;
+            dateLabel.Text = Form1.DayList[0].date;
+            cityLabel.Text = Form1.DayList[0].city;
+            currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempAve))) + "°C";
+            highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempHigh))) + "°C" + "/" + 
+                Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempLow))) + "°C";
+            humidityLabel.Text = "Humidity:\n" + Form1.DayList[0].humidity + "%";
+            cloudsLabel.Text = Form1.DayList[0].clouds;
             if (Form1.chanceRain == "No Rain")
             {
-                chancePrecipLabel.Text = Form1.chanceRain;
+                chancePrecipLabel.Text = Form1.DayList[0].chanceRain;
             }
             else
             {
-                chancePrecipLabel.Text = Form1.chanceRain + "%";
+                chancePrecipLabel.Text = Form1.DayList[0].chanceRain + "%";
             }
-            windLabel.Text = "Wind:\n" + Form1.windSpeed + " m/s\n" + Form1.windDirection;
-            weatherImage.BackgroundImage = Form1.background[Form1.colorPick];
-            this.BackColor = Form1.backColor[Form1.colorPick];
+            windLabel.Text = "Wind:\n" + Form1.windSpeed + " m/s\n" + Form1.DayList[0].windDirection;
+            weatherImage.BackgroundImage = Form1.background[Form1.DayList[0].colorPick];
+            this.BackColor = Form1.backColor[Form1.DayList[0].colorPick];
 
             //Forecast Info
             day2Label.Text = Form1.date1;
@@ -85,8 +85,8 @@ namespace weatherApp2
             string currentFile = "http://api.openweathermap.org/data/2.5/weather?q=Stratford,CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0";
             string forecastFile = "http://api.openweathermap.org/data/2.5/forecast/daily?q=Stratford,CA&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0";
 
-            client.DownloadFile(currentFile, "WeatherData.xml");
-            client.DownloadFile(forecastFile, "WeatherData7Day.xml");
+            //client.DownloadFile(currentFile, "WeatherData.xml");
+            //client.DownloadFile(forecastFile, "WeatherData7Day.xml");
         }
 
         public void ExtractCurrent()
@@ -524,14 +524,14 @@ namespace weatherApp2
                     {
                         if (Convert.ToInt16(Form1.DayList[i].chanceRain) > 50)
                         {
-                            if (Form1.DayList[i].precipType == "rain")
-                            {
-                                Form1.DayList[i].colorPick = 2;
-                            }
-
-                            else if (Form1.DayList[i].precipType == "snow")
+                            if (Form1.DayList[i].precipType == "snow")
                             {
                                 Form1.DayList[i].colorPick = 3;
+                            }
+
+                            else
+                            {
+                                Form1.DayList[i].colorPick = 2;
                             }
                         }
                     }
@@ -553,14 +553,14 @@ namespace weatherApp2
                     {
                         if (Convert.ToInt16(Form1.DayList[i].chanceRain) > 50)
                         {
-                            if (Form1.DayList[i].precipType == "rain")
-                            {
-                                Form1.DayList[i].colorPick = 2;
-                            }
-
-                            else if (Form1.DayList[i].precipType == "snow")
+                            if (Form1.DayList[i].precipType == "snow")
                             {
                                 Form1.DayList[i].colorPick = 3;
+                            }
+
+                            else
+                            {
+                                Form1.DayList[i].colorPick = 2;
                             }
                         }
                     }

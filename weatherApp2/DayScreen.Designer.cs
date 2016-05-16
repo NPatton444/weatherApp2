@@ -31,7 +31,6 @@
             this.backButton = new System.Windows.Forms.Button();
             this.dateLabel = new System.Windows.Forms.Label();
             this.weatherImage = new System.Windows.Forms.PictureBox();
-            this.currentTempLabel = new System.Windows.Forms.Label();
             this.humidityLabel = new System.Windows.Forms.Label();
             this.chancePrecipLabel = new System.Windows.Forms.Label();
             this.cloudsLabel = new System.Windows.Forms.Label();
@@ -77,18 +76,6 @@
             this.weatherImage.TabIndex = 3;
             this.weatherImage.TabStop = false;
             // 
-            // currentTempLabel
-            // 
-            this.currentTempLabel.BackColor = System.Drawing.Color.Transparent;
-            this.currentTempLabel.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentTempLabel.ForeColor = System.Drawing.Color.White;
-            this.currentTempLabel.Location = new System.Drawing.Point(3, 382);
-            this.currentTempLabel.Name = "currentTempLabel";
-            this.currentTempLabel.Size = new System.Drawing.Size(120, 62);
-            this.currentTempLabel.TabIndex = 4;
-            this.currentTempLabel.Text = "label1";
-            this.currentTempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // humidityLabel
             // 
             this.humidityLabel.BackColor = System.Drawing.Color.Transparent;
@@ -128,11 +115,11 @@
             // highLowTempLabel
             // 
             this.highLowTempLabel.BackColor = System.Drawing.Color.Transparent;
-            this.highLowTempLabel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highLowTempLabel.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highLowTempLabel.ForeColor = System.Drawing.Color.White;
-            this.highLowTempLabel.Location = new System.Drawing.Point(262, 402);
+            this.highLowTempLabel.Location = new System.Drawing.Point(45, 407);
             this.highLowTempLabel.Name = "highLowTempLabel";
-            this.highLowTempLabel.Size = new System.Drawing.Size(125, 33);
+            this.highLowTempLabel.Size = new System.Drawing.Size(342, 54);
             this.highLowTempLabel.TabIndex = 9;
             this.highLowTempLabel.Text = "label1";
             this.highLowTempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,7 +145,6 @@
             this.Controls.Add(this.cloudsLabel);
             this.Controls.Add(this.chancePrecipLabel);
             this.Controls.Add(this.humidityLabel);
-            this.Controls.Add(this.currentTempLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.weatherImage);
@@ -175,7 +161,6 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.PictureBox weatherImage;
-        private System.Windows.Forms.Label currentTempLabel;
         private System.Windows.Forms.Label humidityLabel;
         private System.Windows.Forms.Label chancePrecipLabel;
         private System.Windows.Forms.Label cloudsLabel;

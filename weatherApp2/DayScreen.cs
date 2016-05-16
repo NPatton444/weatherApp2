@@ -22,7 +22,6 @@ namespace weatherApp2
             if (Form1.label1Click)
             {
                 dateLabel.Text = Form1.DayList[0].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[0].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[0].humidity + "%";
@@ -44,7 +43,6 @@ namespace weatherApp2
             else if (Form1.label2Click)
             {
                 dateLabel.Text = Form1.DayList[1].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[1].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[1].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[1].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[1].humidity + "%";
@@ -66,7 +64,6 @@ namespace weatherApp2
             else if (Form1.label3Click)
             {
                 dateLabel.Text = Form1.DayList[2].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[2].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[2].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[2].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[2].humidity + "%";
@@ -88,7 +85,6 @@ namespace weatherApp2
             else if (Form1.label4Click)
             {
                 dateLabel.Text = Form1.DayList[3].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[3].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[3].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[3].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[3].humidity + "%";
@@ -110,7 +106,6 @@ namespace weatherApp2
             else if (Form1.label5Click)
             {
                 dateLabel.Text = Form1.DayList[4].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[4].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[4].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[4].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[4].humidity + "%";
@@ -132,7 +127,6 @@ namespace weatherApp2
             else if (Form1.label6Click)
             {
                 dateLabel.Text = Form1.DayList[5].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[5].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[5].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[5].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[5].humidity + "%";
@@ -154,7 +148,6 @@ namespace weatherApp2
             else if (Form1.label7Click)
             {
                 dateLabel.Text = Form1.DayList[6].date;
-                currentTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[6].tempAve))) + "°C";
                 highLowTempLabel.Text = Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[6].tempHigh))) + "°C"
                     + "/" + Convert.ToString(Math.Round(Convert.ToDecimal(Form1.DayList[6].tempLow))) + "°C";
                 humidityLabel.Text = "Humidity:\n" + Form1.DayList[6].humidity + "%";
